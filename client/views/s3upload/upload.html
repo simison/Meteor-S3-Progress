@@ -6,9 +6,7 @@
   {{else}}
     {{#if noUploads}}
       <input type="file" class='hidden s3-file-upload no-select'>
-      {{#if allow_user_config}}
-      <div class="btn-group col-md-12 col-sm-12 col-xs-12 col-lg-12">
-      {{/if}}
+      <div class="{{#if allow_user_config}}btn-group col-md-12 col-sm-12 col-xs-12 col-lg-12{{/if}}">
       <button class='btn btn-default {{button_size_css}} s3-file-upload-button'>
         {{#if s3private}}
         <span class='glyphicon glyphicon-cloud-upload'></span> Private Upload
@@ -20,8 +18,8 @@
         <button class='btn btn-default col-md-1 col-sm-2 col-xs-2 col-lg-1 s3-user-config-button'>
           <span class='glyphicon glyphicon-cog'></span>
         </button>
-      </div>
       {{/if}}
+      </div>
     {{else}}
     {{> s3progress}}
     {{/if}}
